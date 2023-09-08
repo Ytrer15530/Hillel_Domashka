@@ -21,4 +21,12 @@ for i in string_input:
         symbol_count += 1
 print(f"In string {symbol_count} {symbol_search}'s")
 
+# Task 3
+
+string_input = input("Enter string: ").lower()
+what_word = input("What word you want to change?: ").lower()
+what_to = input("On what word you want to change?: ").lower()
+print(f"Your string is -> {string_input.replace(what_word, what_to).title()}")
+
+
 
