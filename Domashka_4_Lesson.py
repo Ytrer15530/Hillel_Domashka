@@ -41,3 +41,24 @@ print(f"Непарные индексы -> {user_input_string[1::2]}")
 print(f"Строка наоборот -> {user_input_string[::-1]}")
 print(f"Строка наоборот через 1 -> {user_input_string[::-2]}")
 print(f"Длина строки -> {len(user_input_string)}")
+
+
+
+# Дополнительное задание
+
+punctuation = [".", ",", ":", ";", "?", "-"]
+exclamation_mark_count = 0
+punctuation_marks_count = 0
+number_count = 0
+text = input("Enter text: ")
+
+for i in text:
+    if i in punctuation:
+        punctuation_marks_count += 1
+    elif i.isnumeric():
+        number_count += 1
+    elif i == "!":
+        exclamation_mark_count += 1
+
+print(f"Знаков восклицания - {exclamation_mark_count}, знаков препинания - {punctuation_marks_count}, чисел - {number_count}")
+print(text.title())
