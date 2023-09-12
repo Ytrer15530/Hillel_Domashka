@@ -5,6 +5,7 @@ sum_neg = 0
 negative_list = []
 even_sum = 0
 odd_sum = 0
+indexes_sum_3 = 1
 
 for i in range(10):
     random_number = random.randint(-10, 10)
@@ -31,3 +32,9 @@ for i in random_list:
         odd_sum += i
         # print(i, end=" ")
 print(f"Сумма непарных чисел равна -> {odd_sum}")
+
+for i in random_list[::3]:
+    indexes_sum_3 *= i
+    # print(i, end=" ")
+print(f"Произведение индексов кратным 3 -> {indexes_sum_3} ")
+
