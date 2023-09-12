@@ -5,7 +5,8 @@ sum_neg = 0
 negative_list = []
 even_sum = 0
 odd_sum = 0
-indexes_sum_3 = 1
+indexes_mult_3 = 1
+min_max_mult = 1
 
 for i in range(10):
     random_number = random.randint(-10, 10)
@@ -34,7 +35,17 @@ for i in random_list:
 print(f"Сумма непарных чисел равна -> {odd_sum}")
 
 for i in random_list[::3]:
-    indexes_sum_3 *= i
+    indexes_mult_3 *= i
     # print(i, end=" ")
-print(f"Произведение индексов кратным 3 -> {indexes_sum_3} ")
+print(f"Произведение индексов кратным 3 -> {indexes_mult_3} ")
 
+
+min_list = random_list.index(min(random_list))
+max_list = random_list.index(max(random_list))
+
+if min_list > max_list:
+    min_list, max_list = max_list, min_list
+
+for i in random_list[min_list+1: max_list]:
+    min_max_mult *= i
+print(f"Произведение чисел между макс и мин числом -> {min_max_mult}")
