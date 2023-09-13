@@ -7,6 +7,7 @@ even_sum = 0
 odd_sum = 0
 indexes_mult_3 = 1
 min_max_mult = 1
+left_right_sum = 0
 
 for i in range(10):
     random_number = random.randint(-10, 10)
@@ -49,3 +50,24 @@ if min_list > max_list:
 for i in random_list[min_list+1: max_list]:
     min_max_mult *= i
 print(f"Произведение чисел между макс и мин числом -> {min_max_mult}")
+
+left_pos = None
+right_pos = None
+
+for i in range(len(random_list)):
+    if random_list[i] > 0:
+        left_pos = i
+        # print(i)
+        break
+
+for i in range(len(random_list) - 1, -1, -1):
+    if random_list[i] > 0:
+        right_pos = i
+        # print(right_pos)
+        break
+
+for i in random_list[left_pos+1: right_pos]:
+    left_right_sum += i
+# print(left_right_sum)
+
+print(f"Сумма между первым и последним позитивным числом -> {left_right_sum}")
