@@ -71,3 +71,29 @@ for i in random_list[left_pos+1: right_pos]:
 # print(left_right_sum)
 
 print(f"Сумма между первым и последним позитивным числом -> {left_right_sum}")
+
+# TASK 2
+even_list = []
+odd_list = []
+neg_list = []
+pos_list = []
+
+for i in random_list:
+    if i % 2 == 0:
+        even_list.append(i)
+print(f"Список парных чисел -> {even_list}")
+
+for i in random_list:
+    if i % 2 != 0:
+        odd_list.append(i)
+print(f"Список непарных чисел -> {odd_list}")
+
+for i in random_list:
+    if i < 0:
+        neg_list.append(i)
+print(f"Список негативных чисел -> {neg_list}")
+
+for i in random_list:
+    if i > 0:
+        pos_list.append(i)
+print(f"Список позитивных чисел -> {pos_list}")
