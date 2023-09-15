@@ -47,3 +47,9 @@ while True:
         print("City not found!")
 
 # print(country_city.items())
+
+list_keys = [1, 2, 3, 4, 5]
+list_values = ['a', 'b', 'c', 'd', 'e']
+
+task_dict = {list_keys[i]: list_values[i] for i in range(len(list_keys))}
+print(task_dict)
