@@ -29,4 +29,21 @@ import random
 # print(words_list)
 # print(words_count)
 
+country_city = {
+    "Ukraine": ["Kyiv", "Lviv", "Dnipro"],
+    "USA": ["Los Angeles", "Las Vegas"]
+}
 
+while True:
+    City_Name = input("Enter city: ").lower()
+    found = False
+
+    for country, city in country_city.items():
+        for temp_city in city:
+            if City_Name == temp_city.lower():
+                print(f" Этот город находится в -> {country}")
+                found = True
+    if not found:
+        print("City not found!")
+
+# print(country_city.items())
