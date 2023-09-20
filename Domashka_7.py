@@ -52,6 +52,14 @@ def get_same_numbers_in_list(numbers_1: list, numbers_2: list):
     return same_list
 
 
+def list_degree(numbers: list, degree: int):
+    degree_list = []
+    for num in numbers:
+        degree_int = num ** degree
+        degree_list.append(degree_int)
+    return degree_list
+
+
 random_numbers_list = [random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER) for i in range(10)]
 random_numbers_list_2 = [random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER) for j in range(10)]
 print(random_numbers_list)
@@ -63,4 +71,5 @@ print(f"Количество простых чисел в списке -> {len_p
 remove_int = int(input("Enter number to remove: "))
 print(f"Количество удаленных чисел -> {remove_number(random_numbers_list, remove_int)}")
 print(get_same_numbers_in_list(random_numbers_list, random_numbers_list_2))
-
+degree = int(input("Enter degree int: "))
+print(list_degree(random_numbers_list, degree))
