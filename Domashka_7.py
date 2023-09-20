@@ -34,9 +34,21 @@ def len_prime_list(prime_list: list):
     return len(prime_list)
 
 
+def remove_number(numbers, number_to_remove):
+    remove_count = 0
+    for num in numbers:
+        if num != number_to_remove:
+            continue
+        else:
+            remove_count += 1
+    return remove_count
+
+
 random_numbers_list = [random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER) for i in range(10)]
 print(random_numbers_list)
 print(f"Произведение списка -> {mult_list(random_numbers_list)}")
 print(f"Минимум в списке -> {find_minimum(random_numbers_list)}")
 # print(find_prime_numbers(random_numbers_list))
 print(f"Количество простых чисел в списке -> {len_prime_list(find_prime_numbers(random_numbers_list))}")
+remove_int = int(input("Enter number to remove: "))
+print(f"Количество удаленных чисел -> {remove_number(random_numbers_list, remove_int)}")
