@@ -44,11 +44,23 @@ def remove_number(numbers, number_to_remove):
     return remove_count
 
 
+def get_same_numbers_in_list(numbers_1: list, numbers_2: list):
+    same_list = []
+    for i in set(numbers_1):
+        if i in numbers_2:
+            same_list.append(i)
+    return same_list
+
+
 random_numbers_list = [random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER) for i in range(10)]
+random_numbers_list_2 = [random.randint(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER) for j in range(10)]
 print(random_numbers_list)
+print(random_numbers_list_2)
 print(f"Произведение списка -> {mult_list(random_numbers_list)}")
 print(f"Минимум в списке -> {find_minimum(random_numbers_list)}")
 # print(find_prime_numbers(random_numbers_list))
 print(f"Количество простых чисел в списке -> {len_prime_list(find_prime_numbers(random_numbers_list))}")
 remove_int = int(input("Enter number to remove: "))
 print(f"Количество удаленных чисел -> {remove_number(random_numbers_list, remove_int)}")
+print(get_same_numbers_in_list(random_numbers_list, random_numbers_list_2))
+
