@@ -24,3 +24,10 @@ elif len(email_string) > max_email_len or len(email_string) < min_email_len:
     print(f"Min email len is {min_email_len} and max is {max_email_len}")
 else:
     print("Email incorrect")
+
+
+FIO = input("Введите ФИО: ")
+if re.match(r"^[a-zA-Z]{2,20} [a-zA-Z]{2,20} [a-zA-Z]{2,20}$", FIO):
+    print("Все ОК")
+else:
+    print("Введите правильное ФИО")
