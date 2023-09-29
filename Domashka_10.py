@@ -13,3 +13,14 @@ if re.findall("[a-zA-Z!@#$%^&*()_=]", ua_tel) or 12 > len(ua_tel) > 13:
     print("Incorrect number!")
 elif re.match(r"^[+]?\d", ua_tel) and 12 <= len(ua_tel) <= 13:
     print(f"{ua_tel} OK")
+
+email_string = input("Enter email: ")
+max_email_len = 30
+min_email_len = 10
+
+if re.match(r"^[a-zA-Z\d!#$%^&*()_=+]+@[a-zA-Z\d]+\.[a-zA-Z]{2,}$", email_string) and min_email_len <= len(email_string) <= max_email_len:
+    print(f"{email_string} is OK")
+elif len(email_string) > max_email_len or len(email_string) < min_email_len:
+    print(f"Min email len is {min_email_len} and max is {max_email_len}")
+else:
+    print("Email incorrect")
